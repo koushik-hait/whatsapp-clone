@@ -1,28 +1,7 @@
-import { useState, useContext, useEffect } from 'react';
-import { SocketContext } from '../../context/SocketContext';
+
 
 export default function ChatList() {
     // document.title = "";
-    const users = [
-        {
-            username: "xyz abc",
-            userImg: "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?auto=compress&cs=tinysrgb&w=600",
-            mobile: '+917602308104',
-            lastMsg: "hell ya",
-            time: new Date(Date.now()).getHours() + ":" + new Date(Date.now()).getMinutes(),
-        },
-        {
-            username: "xyz abc 1",
-            userImg: "https://images.pexels.com/photos/3772510/pexels-photo-3772510.jpeg?auto=compress&cs=tinysrgb&w=600",
-            mobile: '+918902308103',
-            lastMsg: "hello world",
-            time: new Date(Date.now()).getHours() + ":" + new Date(Date.now()).getMinutes(),
-        },
-    ]
-
-    const [user, setUser] = useState({})
-    const [userList, setUserList] = useState(users)
-    const { activeChat, setActiveChat  } = useContext(SocketContext);
 
     return (
         <>
@@ -55,32 +34,27 @@ export default function ChatList() {
 
                 {/* <!-- Contacts --> */}
                 <div className="bg-grey-lighter flex-1 overflow-auto">
-                    {userList.map((user, index) => {
-                        return (
                             <>
-                                <div key={index} onClick={(e)=>{setActiveChat(user); console.log(activeChat)}} className="px-3 flex items-center bg-grey-light cursor-pointer">
+                                <div onClick={(e)=>{}} className="px-3 flex items-center bg-grey-light cursor-pointer">
                                     <div>
-                                        <img src={user.userImg} alt="xyz" className="h-12 w-12 rounded-full"
+                                        <img src="" alt="xyz" className="h-12 w-12 rounded-full"
                                             />
                                     </div>
                                     <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
                                         <div className="flex items-bottom justify-between">
-                                            <p key={index} className="text-grey-darkest">
-                                                {user.username}
+                                            <p  className="text-grey-darkest">
+                                                xxx
                                             </p>
                                             <p className="text-xs text-grey-darkest">
-                                                {user.time}
+                                               xxx
                                             </p>
                                         </div>
                                         <p className="text-grey-dark mt-1 text-sm">
-                                            {user.lastMsg}
+                                            xxx
                                         </p>
                                     </div>
                                 </div>
                             </>
-                        )
-                    })}
-
 
                 </div>
 

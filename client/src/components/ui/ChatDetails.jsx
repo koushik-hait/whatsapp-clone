@@ -1,14 +1,10 @@
-import { useContext, useEffect } from 'react';
+
 import sendImg from '../../assets/img/send-img.png'
-import { SocketContext } from '../../context/SocketContext';
 
 export default function ChatDetails() {
 
-    const { me, chat, message, setMessage, sendMessage, activeChat  } = useContext(SocketContext);
-
     return (
         <>
-
             {/* <!-- Right --> */}
             <div className="w-2/3 border flex flex-col">
 
@@ -74,24 +70,18 @@ export default function ChatDetails() {
                                 </p>
                             </div>
                         </div>
-
-                        {chat.map((payload, index) => {
-                            return (
                                 <>
                                     <div className="flex justify-end mb-2">
                                         <div className="rounded py-2 px-3 bg-[#E2F7CB]" >
-                                            <p key={index} className="text-sm mt-1">
-                                                {payload.message}
+                                            <p  className="text-sm mt-1">
+                                                xxxx
                                             </p>
                                             <p className="text-right text-xs text-grey-dark mt-1">
-                                                {payload.time}
+                                               xxxx
                                             </p>
                                         </div>
                                     </div>
                                 </>
-                            )
-                        })}
-
                     </div>
                 </div>
 
@@ -102,18 +92,13 @@ export default function ChatDetails() {
                     </div>
                     <div className="flex-1 mx-4">
                         <input className="w-full border rounded px-2 py-2" type="text"
-                            value={message}
-                            onChange={(e) => {
-                                setMessage(e.target.value)
+                            value=""
+                            onChange={(e) => {                      
                             }}
                             onKeyUp={(e) => {
-                                if (e.keyCode === 13) {
-                                    console.log(activeChat)
-                                    sendMessage(activeChat.mobile)
-                                }
                             }} />
                     </div>
-                    <div onClick={(e)=>{sendMessage(activeChat.mobile)}}>
+                    <div onClick={(e)=>{}}>
                         <img src={sendImg} alt="" srcset="" />
                     </div>
                     <div>
