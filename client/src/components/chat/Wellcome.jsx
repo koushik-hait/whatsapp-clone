@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Robot from "../../assets/img/robot.gif";
+import WellcomeIcon from "../../assets/img/real_time_sync.svg"
 import ChatInput from "./ChatInput";
 import Logout from "./Logout";
 
@@ -31,7 +32,7 @@ export default function Welcome() {
             <div className="flex justify-center mb-2">
               <div className="rounded py-2 px-4 bg-[#DDECF2]" >
                 <p className="text-sm uppercase">
-                  {Date.now()}
+               { new Date(Date.now()).getDate() + "/" + new Date(Date.now()).getMonth() + "/" +new Date(Date.now()).getUTCFullYear()}
                 </p>
               </div>
             </div>
@@ -43,7 +44,20 @@ export default function Welcome() {
                 </p>
               </div>
             </div>
-            Wellcome <span>{userName}</span>
+            <div className="flex justify-center mb-4">
+              <div className="rounded py-2 px-4 " >
+                <img className="w-[300px] h-[200px]" src={WellcomeIcon} alt="ICON" />
+                <h1 className="text-lg text-center font-bold">
+                  Whatsapp Web
+                </h1>
+              </div>
+            </div>
+            <div className="flex justify-center mb-4">
+              <div className="rounded py-2 px-4 " >
+              <span className="text-center text-xs uppercase">Wellcome {userName}</span>
+              </div>
+            </div>
+             
           </div>
         </div>
         </div>

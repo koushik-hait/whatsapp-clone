@@ -18,8 +18,6 @@ export default function Logout() {
     }
   };
   return (
-    <button onClick={handleClick}>
-      <BiPowerOff />
-    </button>
+    <li onClick={handleClick} class="hover:bg-gray-300 text-gray-700 block px-4 py-2 text-sm cursor-pointer" id="cmenu-item-4">Logout</li>
   );
 };
