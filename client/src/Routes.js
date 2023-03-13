@@ -12,6 +12,8 @@ const Chat = lazy(() => import("./pages/Chat"));
 const Login = lazy(() => import("./pages/Login"));
 const Register = lazy(() => import("./pages/Register"));
 const SetAvatar = lazy(() => import("./pages/SetAvtar"));
+const LoginMobile = lazy(() => import("./pages/LoginMobile"));
+
 
 const CRoutes = () => {
     return (
@@ -19,7 +21,7 @@ const CRoutes = () => {
         <Routes>
           <Route index element={<Chat />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginMobile />} />
           <Route path="/setAvatar" element={<SetAvatar />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/call" element={<Call />} />
